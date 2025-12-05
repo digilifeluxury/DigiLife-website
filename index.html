@@ -578,6 +578,9 @@
             cursor: pointer;
             transition: all 0.3s ease;
             margin-top: 1.5rem;
+            text-decoration: none;
+            display: block;
+            text-align: center;
         }
 
         .pricing-card:not(.featured) .pricing-cta {
@@ -1067,7 +1070,7 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+                <li><a href="https://calendly.com/digilifeluxury/30min" target="_blank" class="nav-cta">Book Consultation</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
@@ -1088,7 +1091,7 @@
                 Expert digital organization and personalized tech support designed specifically for older adults. We handle the complexity so you can enjoy the convenience.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="cta-button">Get Started Today</a>
+                <a href="https://calendly.com/digilifeluxury/30min" target="_blank" class="cta-button">Book Free Consultation</a>
                 <a href="#how-it-works" class="cta-button cta-button-secondary">Learn More</a>
             </div>
         </div>
@@ -1223,7 +1226,7 @@
                     <li>Calendar & Reminder Setup</li>
                     <li>Appointments & doctor visits</li>
                 </ul>
-                <button class="pricing-cta">Get Started</button>
+                <a href="https://calendly.com/digilifeluxury/30min" target="_blank" class="pricing-cta">Book Free Consultation</a>
             </div>
             <div class="pricing-card featured">
                 <div class="pricing-badge">Most Popular</div>
@@ -1239,7 +1242,7 @@
                     <li>Priority phone support</li>
                     <li>Monthly check-ins</li>
                 </ul>
-                <button class="pricing-cta">Get Started</button>
+                <a href="https://calendly.com/digilifeluxury/30min" target="_blank" class="pricing-cta">Book Free Consultation</a>
             </div>
             <div class="pricing-card">
                 <h3>Premium Plan</h3>
@@ -1255,7 +1258,7 @@
                     <li>Dedicated Account Manager</li>
                     <li>Family/Caregiver Reporting</li>
                 </ul>
-                <button class="pricing-cta">Get Started</button>
+                <a href="https://calendly.com/digilifeluxury/30min" target="_blank" class="pricing-cta">Book Free Consultation</a>
             </div>
         </div>
     </section>
@@ -1389,7 +1392,7 @@
                 </button>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Yes! We offer in-home visits for clients in the Saginaw, Michigan area. For clients outside our area, we can work effectively via video call or remote access. Many clients prefer the convenience of remote sessions after their first in-person meeting.
+                        Yes! We offer in-home visits for local clients. For clients outside our immediate area, we can work effectively via video call or remote access. Many clients prefer the convenience of remote sessions after their first in-person meeting.
                     </div>
                 </div>
             </div>
@@ -1455,7 +1458,7 @@
                     </svg>
                     <div>
                         <h4>Phone</h4>
-                        <p>(989) 555-DIGI<br>Monday - Saturday: 8am - 8pm<br>Sunday: 10am - 4pm</p>
+                        <p>(989) 220-3585<br>Monday - Saturday: 8am - 8pm<br>Sunday: 10am - 4pm</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -1465,7 +1468,7 @@
                     </svg>
                     <div>
                         <h4>Email</h4>
-                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb3beb7b7b49bbfb2bcb2b7b2bdbef5b8b4b6">[email&#160;protected]</a><br>We respond within 24 hours</p>
+                        <p><a href="/cdn-cgi/l/email-protection#286c414f4144414e4d445d505d5a51684f45494144064b4745"><span class="__cf_email__" data-cfemail="084c616f6164616e6d647d707d7a71486f65696164266b6765">[email&#160;protected]</span></a><br>We respond within 24 hours</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -1474,13 +1477,17 @@
                     </svg>
                     <div>
                         <h4>Location</h4>
-                        <p>Serving Saginaw, Michigan<br>and surrounding areas<br>Remote service available nationwide</p>
+                        <p>Serving Michigan<br>and surrounding states<br>Remote service available nationwide</p>
                     </div>
                 </div>
             </div>
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
-                <form>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required>
@@ -1496,8 +1503,7 @@
                     <div class="form-group">
                         <label for="service">What can we help you with?</label>
                         <select id="service" name="service" required>
-                            <option value="">Please select...</option>
-                            <option value="consultation">Free Consultation</option>
+                      on</option>
                             <option value="document">Document Management</option>
                             <option value="calendar">Calendar & Reminders</option>
                             <option value="bills">Bill Management</option>
@@ -1581,13 +1587,6 @@
             });
         });
 
-        // Form submission handler (you'll need to connect this to your backend)
-        document.querySelector('.contact-form form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
-            e.target.reset();
-        });
-
         // Add animation on scroll
         const observerOptions = {
             threshold: 0.1,
@@ -1605,4 +1604,16 @@
 
         // Observe elements for animation
         document.querySelectorAll('.service-card, .feature-item, .step-item, .testimonial-card, .pricing-card').forEach(el => {
-            
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=
