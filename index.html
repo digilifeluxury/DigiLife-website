@@ -637,8 +637,8 @@
         }
 
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-teal) 100%);
             display: flex;
@@ -647,6 +647,14 @@
             color: white;
             font-weight: 700;
             font-size: 1.2rem;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .author-info h4 {
@@ -1267,20 +1275,22 @@
     <section id="testimonials" class="section">
         <div class="section-header">
             <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">Join hundreds of satisfied clients who've discovered how easy technology can be</p>
+            <p class="section-subtitle">Real stories from real people we've helped</p>
         </div>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="quote-icon">"</div>
                 <div class="stars">★★★★★</div>
                 <p class="testimonial-text">
-                    "Sarah was so patient with me. She organized all my photos from the last 20 years and now I can actually find them! I never thought I'd be comfortable with technology, but she made it so easy."
+                    Finally got all my old photos organized! Took forever but they were so patient with me. Now I can actually find pictures when I want to show the grandkids.
                 </p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">MT</div>
+                    <div class="author-avatar">
+                        <img src="margaret.jpg" alt="Margaret T.">
+                    </div>
                     <div class="author-info">
-                        <h4>Margaret Thompson</h4>
-                        <p>Retired Teacher, Age 68</p>
+                        <h4>Margaret T.</h4>
+                        <p>Age 72</p>
                     </div>
                 </div>
             </div>
@@ -1288,13 +1298,15 @@
                 <div class="quote-icon">"</div>
                 <div class="stars">★★★★★</div>
                 <p class="testimonial-text">
-                    "I was getting overwhelmed with bills and appointments. DigiLife set up reminders and organized everything. Now I never miss a payment or doctor's appointment. It's been life-changing!"
+                    Got this service for my mom who lives alone. She was constantly calling me about her iPad and computer problems. Now DigiLife handles it all and she's way less stressed. Best decision ever.
                 </p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">RJ</div>
+                    <div class="author-avatar">
+                        <img src="jennifer.jpg" alt="Jennifer C.">
+                    </div>
                     <div class="author-info">
-                        <h4>Robert Johnson</h4>
-                        <p>Retired Engineer, Age 72</p>
+                        <h4>Jennifer C.</h4>
+                        <p>Age 58</p>
                     </div>
                 </div>
             </div>
@@ -1302,13 +1314,63 @@
                 <div class="quote-icon">"</div>
                 <div class="stars">★★★★★</div>
                 <p class="testimonial-text">
-                    "My son was always too busy to help me with my computer. DigiLife is always available and explains things without making me feel foolish. They're like having a tech-savvy grandchild on call!"
+                    Almost got scammed last month but they caught it. They check my emails with me and make sure I don't click on anything bad. Feel a lot safer now.
                 </p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">DW</div>
+                    <div class="author-avatar">
+                        <img src="dorothy.jpg" alt="Dorothy W.">
+                    </div>
                     <div class="author-info">
-                        <h4>Dorothy Wilson</h4>
-                        <p>Retired Nurse, Age 75</p>
+                        <h4>Dorothy W.</h4>
+                        <p>Age 78</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+                    My daughter got me this service and honestly it's been great. They help me with my iPad, set up reminders for my pills, all that stuff. Very nice people.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="linda.jpg" alt="Linda C.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Linda C.</h4>
+                        <p>Age 68</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+                    These guys don't talk down to you like some tech people do. They explain things until I get it. Fixed my email and showed me how to not get hacked.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="bob.jpg" alt="Bob M.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Bob M.</h4>
+                        <p>Age 62</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+                    $30 a month is nothing for the peace of mind. Whenever something goes wrong with my phone or computer I just call them. No more bugging my kids lol.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="frank.jpg" alt="Frank D.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Frank D.</h4>
+                        <p>Age 70</p>
                     </div>
                 </div>
             </div>
