@@ -1547,7 +1547,7 @@
             </div>
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
-                <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+                <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" onsubmit="sendEmail(event)">
                     <input type="hidden" name="form-name" value="contact">
                     <p style="display: none;">
                         <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -1680,6 +1680,34 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+    </script>
+    
+    <!-- EmailJS Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("e7WZJuxwKY1ddbNsQ"); // your PUBLIC KEY
+        })();
+    </script>
+    
+    <script>
+    function sendEmail(event) {
+        event.preventDefault(); // Prevent page reload
+        emailjs.sendForm(
+            "service_p49w58i",   // Your Service ID
+            "template_tdewbym",  // Your Template ID
+            event.target         // The form element
+        )
+        .then(() => {
+            alert("Message sent successfully!");
+            event.target.reset();
+            // Optionally redirect to thank you page
+            window.location.href = "/thank-you";
+        })
+        .catch((error) => {
+            alert("Email failed: " + JSON.stringify(error));
+        });
+    }
     </script>
     
     <!--Start of Tawk.to Script-->
