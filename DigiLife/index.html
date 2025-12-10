@@ -11,10 +11,13 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-    emailjs.init("e7WZJuxwKY1ddbNsQ");
-</script>
+    <script>
+        (function() {
+            emailjs.init({
+                publicKey: "YOUR_PUBLIC_KEY_HERE"
+            });
+        })();
+    </script>
     
 </head>
 <body>
@@ -596,4 +599,5 @@
     </script>
     <!--End of Tawk.to Script-->
 </body>
+
 </html>
