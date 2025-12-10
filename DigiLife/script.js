@@ -10,7 +10,7 @@ function sendMail(event) {
     subject: "Website Contact Form"
 };
 
-    emailjs.send("service_rzy8r2f", "template_tdewbym", parms)
+    emailjs.send("service_rzy8r2f", "template_xqg87eo", parms)
         .then(() => {
             alert("Email Sent!");
             window.location.href = "/thank-you"; 
@@ -93,3 +93,4 @@ function sendMail(event) {
             observer.observe(el);
 
         });
+
